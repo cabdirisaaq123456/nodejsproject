@@ -34,7 +34,7 @@ exports.createTask = (req, res) => {
         console.log(files.Image.name)
 
         if (files.Image) {
-            copyFileSync(files.Image.path, path.join(__dirname, '../uploads', files.Image.name));
+            copyFileSync(Image.filepath, path.join(__dirname, '../uploads', Image.newfilename));
         }
 
         res.writeHead(201, { 'Content-Type': 'application/json' });
