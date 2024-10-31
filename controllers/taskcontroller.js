@@ -26,7 +26,7 @@ exports.createTask = (req, res) => {
             title: fields.title,
             description: fields.description || '',
             status: fields.status || 'pending',
-            Image: files.Image ? `/uploads/${files.Image.name}` : null,
+            Image:Image ? `/uploads/${Image.orginfilename}` : null,
         };
 
         tasks.push(newTask);
