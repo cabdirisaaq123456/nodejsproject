@@ -18,10 +18,11 @@ const taskroutes=(req,res) =>{
     }
     else{
         res.writehead(404,'not found',{'content_type':'application/json'
-        });
-            res.end(JSON.stringify({
-                message:'page not found'
-            }))
+        })
+        res.end(JSON.stringify({
+            message:'unkown method required'
+        }))
+         
         }
     }
 

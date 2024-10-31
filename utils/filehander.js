@@ -1,13 +1,13 @@
 const fs=require('fs');
-exports.writetaskTofile=(data)=>{
-fs.writeFileSync('/../data/task.json',JSON.stringify(data));
-return data;
+const path=require('path');
+const filepath='./data/tasks.json';
+exports. writetaskTofile=(tasks)=>{
+  fs.writeFileSync(filepath,JSON.stringify(tasks));   
 }
-exports.readTasksFromFile=()=>{
-    if(!fs.existsSync('./../data/task.json')){
-        this.writetaskTofile([]);
+exports. readTasksFromFile =()=>{
+    if(! fs.existsSync(filepath)){
+        writetaskTofile([])
     }
-    return [];
+    const data =fs.readFileSync(filepath);
+    return JSON.parse(data)
 }
-
-//wuu saxanyahay kan

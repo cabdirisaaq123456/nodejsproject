@@ -1,5 +1,5 @@
-const { readTasksFromFile } = require("./filehander")
+const { readTasksFromFile } = require("../utils/filehander")
 
-exports.getTasks=(req,res) =>{
-  const task=  readTasksFromFile
+exports.getTasks=(req,res)=>{
+  const task =readTasksFromFile();
 }
